@@ -15,13 +15,13 @@ public class Interfaz implements ActionListener {
 
     //Panel pN, pb1, pb3;
     Panel panelNumeros, pBloqueMemoria, pBloqueOperadores; //panelNumeros caja de texto donde aparecen los numeros y operaciones
-
+// esto es otra prueba
     //JPanel pS, pb2;
     JPanel panelSimbolos, pBloqueNumerico;   // panelsimbolos donde se encuentran los numeros , y operadores
 
     //JButton mc, mr, ms, mMas, mMenos, numeros[], operaciones[];
     /**
-     * Variables que gestionan los c√°lculos de memoria
+     * Variables que gestionan los c·lculos de memoria
      */
     JButton memoryCancel, memoryResult, memoryStorage, memoryMas, memoryMenos, numeros[], operaciones[];
 
@@ -41,7 +41,7 @@ public class Interfaz implements ActionListener {
     boolean swNumero = false;//control sobre escribir un nuevo numero despues de alguna operacion cambia a true cuando se ha realizado una operacion
 /**
  * Metodo que Gestiona la clase principal de CalculadoraGUI
- * desde aqui se crea la interfaz de la c√°lculadora y se reealizan todas las 
+ * desde aqui se crea la interfaz de la c·lculadora y se reealizan todas las 
  * operaciones solicitadas
  */
     public Interfaz() {
@@ -62,7 +62,7 @@ public class Interfaz implements ActionListener {
         jfMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 /**
- * M√©todo que crea la caja de la c√°lculadora
+ * MÈtodo que crea la caja de la c·lculadora
  */
     public void norte() {
 
@@ -96,7 +96,7 @@ public class Interfaz implements ActionListener {
 
     }
 /**
- * M√©todo que llama a los botones
+ * MÈtodo que llama a los botones
  */
     public void sur() {
 
@@ -114,7 +114,7 @@ public class Interfaz implements ActionListener {
         panelSimbolos.setSize(270, 330);
     }
 /**
- * M√©todo que muestra los botones de Memoria 
+ * MÈtodo que muestra los botones de Memoria 
  * MC MR MS M+ M-
  */
     public void botMem() {
@@ -161,7 +161,7 @@ public class Interfaz implements ActionListener {
         pBloqueMemoria.setVisible(true);
     }
 /**
- * M√©todo que muestra los botones numericos
+ * MÈtodo que muestra los botones numericos
  */
     public void botNum() {
 
@@ -172,7 +172,7 @@ public class Interfaz implements ActionListener {
         numeros = new JButton[11];
 
         //*****************************************
-        //bloque para crear los botones, a√±adirlos y asignar numeros
+        //bloque para crear los botones, aÒadirlos y asignar numeros
         for (int i = 0; i <= 10; i++) {
             if (i <= 9) {
                 numeros[i] = new JButton("" + i);
@@ -212,7 +212,7 @@ public class Interfaz implements ActionListener {
         pBloqueNumerico.setVisible(true);
     }
 /**
- * M√©todo botOpe muestra los botones de las operaciones
+ * MÈtodo botOpe muestra los botones de las operaciones
  */
     public void botOpe() {
         pBloqueOperadores = new Panel(null);
@@ -256,7 +256,7 @@ public class Interfaz implements ActionListener {
         pBloqueOperadores.setSize(120, 200);
     }
 /**
- * M√©todo que evalua si es un n√∫mero
+ * MÈtodo que evalua si es un n˙mero
  * @param ax para verificar el dato numerico
  * @return boolean
  */
@@ -270,7 +270,7 @@ public class Interfaz implements ActionListener {
     }
 //***********************************
 /**
- * M√©todo que recoje los datos introducidos por la calculadora
+ * MÈtodo que recoje los datos introducidos por la calculadora
  * @param e 
  */
     @Override
@@ -338,12 +338,12 @@ public class Interfaz implements ActionListener {
             }
             if (e.getActionCommand().equals("=") && !jTexto2.getText().equals("")) {
                 swNumero = true;
-                operation(tipOperador);  // c√°lcula la operaci√≥n
+                operation(tipOperador);  // c·lcula la operaciÛn
             }
         }
     }
 /**
- * M√©todo que realiza la Suma
+ * MÈtodo que realiza la Suma
  */
     public void setOperationSuma(){
         numeros[10].setEnabled(true);
@@ -355,7 +355,7 @@ public class Interfaz implements ActionListener {
         }
     }
 /**
- * M√©todo que realiza la Resta
+ * MÈtodo que realiza la Resta
  */
     public void setOperationResta() {
         numeros[10].setEnabled(true);
@@ -367,7 +367,7 @@ public class Interfaz implements ActionListener {
         }
     }
 /**
- * M√©todo que realiza la Multiplicaci√≥n
+ * MÈtodo que realiza la MultiplicaciÛn
  */
     public void setOperationMultiplica() {
         numeros[10].setEnabled(true);
@@ -379,7 +379,7 @@ public class Interfaz implements ActionListener {
         }
     }
 /**
- * M√©todo que realiza la Divisi√≥n
+ * MÈtodo que realiza la DivisiÛn
  */
     public void setOperationDivide()  {
         numeros[10].setEnabled(true);
@@ -391,7 +391,7 @@ public class Interfaz implements ActionListener {
         }
     }
 /**
- * M√©todo que muestra el n√∫mero seleccionado
+ * MÈtodo que muestra el n˙mero seleccionado
  * @param e valor ingresa desde la calculadorea
  */
     public void setTexto(ActionEvent e) {
@@ -399,7 +399,7 @@ public class Interfaz implements ActionListener {
         jTexto2.setText(axioma);
     }
 /**
- * M√©todo que muestra el n√∫mero seleccionado
+ * MÈtodo que muestra el n˙mero seleccionado
  * @param e valor ingresa desde la calculadorea
  */
     public void getTexto(ActionEvent e) {
@@ -408,35 +408,35 @@ public class Interfaz implements ActionListener {
         jTexto2.setText(axioma);
     }
 /**
- * M√©todo que restar el valor de la pantalla con el valor de la memoria
+ * MÈtodo que restar el valor de la pantalla con el valor de la memoria
  */
     public void restaMemory() throws NumberFormatException {
         //restar valor de la pantalla con el valor de la memoria
         memoria -= Float.parseFloat(jTexto2.getText());
     }
 /**
- * M√©todo que suma valor de la pantalla con el valor de la memoria
+ * MÈtodo que suma valor de la pantalla con el valor de la memoria
  */
     public void sumaMemory()  {
         //sumar valor de la pantalla con el valor de la memoria
         memoria += Float.parseFloat(jTexto2.getText());
     }
 /**
- * M√©todo que guarda un valor en la memoria
+ * MÈtodo que guarda un valor en la memoria
  */
     public void saveMemory() {
         memoryStorage.setForeground(Color.red);
         memoria = Float.parseFloat(jTexto2.getText());
     }
 /**
- * M√©todo para mostrar valor almacenado en la memoria
+ * MÈtodo para mostrar valor almacenado en la memoria
  */
     public void mostrarMemory() {
         jTexto1.setText("");
         jTexto2.setText(String.valueOf(memoria));
     }
 /**
- * M√©todo para limpiar la memoria de la calculadora
+ * MÈtodo para limpiar la memoria de la calculadora
  */
     public void clearMemory() {
         memoryStorage.setForeground(Color.black);
@@ -445,7 +445,7 @@ public class Interfaz implements ActionListener {
         memoria = 0;
     }
 /**
- * M√©todo que reinicia valores y limpia la pantalla
+ * MÈtodo que reinicia valores y limpia la pantalla
  */
     public void clearCalculadora() {
         tipOperador = 0;
@@ -457,7 +457,7 @@ public class Interfaz implements ActionListener {
         axioma = "";
     }
 /**
- * M√©todo que realiza el c√°lculo de la raiz cuadrada
+ * MÈtodo que realiza el c·lculo de la raiz cuadrada
  * 
  */
     public void raizCuadrada()  {
@@ -466,7 +466,7 @@ public class Interfaz implements ActionListener {
         jTexto2.setText("" + Math.sqrt(a));
     }
 /**
- * M√©todo que concatena la operaci√≥n y la agrega al axioma
+ * MÈtodo que concatena la operaciÛn y la agrega al axioma
  * @param xOperador simbolo matematico
  * 
  */
@@ -493,7 +493,7 @@ public class Interfaz implements ActionListener {
         }
     }
 /**
- * M√©todo que realiza la operaci√≥n matem√°tica entre 2 numeros
+ * MÈtodo que realiza la operaciÛn matem·tica entre 2 numeros
  * 
  * @param xOperacion operador matematico +,-,/,*
  *   
